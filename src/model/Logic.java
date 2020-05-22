@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 
 import Exception.NoMoreException;
+import exception.MyExp;
 import processing.core.PApplet;
 
 public class Logic {
