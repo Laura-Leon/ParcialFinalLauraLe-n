@@ -2,6 +2,8 @@ package model;
 
 import java.util.Collections;
 import java.util.LinkedList;
+
+import Exception.NoMoreException;
 import processing.core.PApplet;
 
 public class Logic {
@@ -16,6 +18,8 @@ public class Logic {
 	String tipo;
 	
 	PApplet app;
+	int contador;
+	Boolean contagiado;
 
 	
 	public Logic (PApplet app) {
@@ -23,6 +27,9 @@ public class Logic {
 		
 		info = app.loadStrings("../data/1.txt");
 		PersonaList = new LinkedList <Persona> ();
+		
+		contagiado = false;
+		
 		
 	
 		
@@ -68,7 +75,11 @@ public class Logic {
 			
 		
 
-	
+	public void contagiado (boolean contagiado) throws MyExp {
+		if (contagiado == true) {
+			throw new MyExp ("Contagiado");
+		}
+	}
 	
 	
 	public LinkedList<Persona> getPersonaList() {
