@@ -1,0 +1,3 @@
+sanas:100
+infectadas:40
+recuperadas:20
